@@ -1,0 +1,200 @@
+
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(ellipse at 12% 8%, rgba(116, 218, 196, 0.4), transparent 34%),
+        radial-gradient(ellipse at 88% 92%, rgba(3, 91, 104, 0.65), transparent 40%),
+        #087e83;
+    color: #f5fffc;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+}
+
+header p {
+    color: rgba(245, 255, 252, 0.78);
+}
+
+h1 {
+    font-size: 32px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, button {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    font: inherit;
+    border-radius: 6px;
+}
+
+form {
+    padding: 20px;
+    margin: 24px 0 16px;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 12px 32px rgba(0, 48, 52, 0.18);
+    backdrop-filter: blur(18px) saturate(145%);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+}
+
+input {
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.88);
+    color: #173a3b;
+}
+
+button {
+    border: 0;
+    background: #064e52;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #033b40;
+}
+
+#estado {
+    color: rgba(245, 255, 252, 0.88);
+}
+
+.clima-principal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+#icono {
+    font-size: 64px;
+}
+
+#temperatura {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#descripcion {
+    color: rgba(245, 255, 252, 0.82);
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.datos article {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.datos span, .datos strong {
+    display: block;
+}
+
+.datos span {
+    font-size: 13px;
+    color: rgba(245, 255, 252, 0.75);
+}
+
+.datos strong {
+    margin-top: 8px;
+    font-size: 19px;
+}
+
+#actualizacion, footer {
+    margin-top: 24px;
+    font-size: 13px;
+    color: rgba(245, 255, 252, 0.76);
+}
+
+.pronostico-seccion {
+    margin-top: 28px;
+}
+
+.pronostico-seccion h3 {
+    margin-bottom: 12px;
+}
+
+.pronostico {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.pronostico article {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.pronostico-fecha,
+.pronostico-condicion,
+.pronostico-temperatura {
+    display: block;
+}
+
+.pronostico-fecha {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.pronostico-icono {
+    display: block;
+    margin: 8px 0;
+    font-size: 28px;
+}
+
+.pronostico-condicion {
+    min-height: 2.5em;
+    color: rgba(245, 255, 252, 0.78);
+    font-size: 13px;
+}
+
+.pronostico-temperatura {
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+#resultado[hidden] {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 20px;
+    }
+
+    .datos {
+        grid-template-columns: 1fr;
+    }
+
+    .pronostico {
+        grid-template-columns: 1fr;
+    }
+}
